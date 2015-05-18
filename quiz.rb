@@ -7,7 +7,7 @@
 # it should return false if age is less than minimum_age
 
 def is_of_age? age, minimum_age
-  # your code goes here
+  age > minimum_age
 end
 
 # question 2
@@ -18,8 +18,10 @@ end
 # otherwise, it should return "Come on in."
 # Remember p, print, puts don't return their arguments
 
-def okay_to_drink age, drinking_age
-  # your code goes here
+def okay_to_drink? age, drinking_age
+  if !is_of_age? age, 21 then
+  $stdout.puts "I'm sorry, #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
+  else $stdout.puts "Come on in."
 end
 
 
@@ -36,7 +38,12 @@ end
 # below the desired temperature the method should return
 # "Fix the A/C whenever you have the chance. It's cool."
 def ac_needed current_temp, ac_working, desired_temp
-  # your code goes here
+  if ac_working && current_temp > desired_temp then
+      $stdout.puts "Turn on the A/C Please"
+  elsif ac_working == false && current_temp > desired_temp then
+      $stdout.puts "Fix the A/C now! It's hot!"
+  elsif ac_working == false && current_temp <= desired_temp then
+      $stdout.puts "Fix the A/C whenever you have the chance. It's cool."
 end
 
 
@@ -48,7 +55,17 @@ end
 # and "fizz buzz" if the number is evenly divisible by both 3 and 5
 # note the space in "fizz buzz"
 
-# your code starts here
+def fizz_buzz num
+  if num % 3 == 0 then
+    $stdout.puts "fizz"
+  elsif num % 5 == 0 then
+    $stdout.puts "buzz"
+  elsif num % 15 == 0 then
+    $stdout.puts "fizz buzz"
+  else
+    $stdout.puts num
+end
+
 
 
 # Question 5
