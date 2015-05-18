@@ -6,8 +6,11 @@
 # it should accept strings or numbers in its arguments
 # it should return false if age is less than minimum_age
 
+
+
 def is_of_age? age, minimum_age
-  # your code goes here
+ if age < minimum age
+  puts "is less than minumum age"
 end
 
 # question 2
@@ -19,8 +22,14 @@ end
 # Remember p, print, puts don't return their arguments
 
 def okay_to_drink age, drinking_age
-  # your code goes here
-end
+  if age < drinking_age
+    puts "I'm sorry, <age> isn't old enough to drink. The minimum age is <drinking_age>"
+  elseif age > drinking_age
+     puts "come on in"
+
+p okay_to_drink
+
+  end
 
 
 # question 3
