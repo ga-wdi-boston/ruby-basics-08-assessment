@@ -20,7 +20,7 @@ end
 
 def okay_to_drink age, drinking_age
   unless is_of_age? age, drinking_age then
-    "Im sorry, ${age} isnt old enough to drink. The minimum age is ${drinking_age}."
+    "Im sorry, #{age} isnt old enough to drink. The minimum age is #{drinking_age}."
   else is_of_age? age, drinking_age
     "Come on in."
   end
