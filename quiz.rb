@@ -6,11 +6,9 @@
 # it should accept strings or numbers in its arguments
 # it should return false if age is less than minimum_age
 
-of_age = "26"
-min_age = "21"
 
 def is_of_age? age, minimum_age
-  age == "26"; min_age == "21"
+  age.to_i >= minimum_age.to_i
 end
 
 
@@ -25,12 +23,12 @@ end
 
 
 
-okay_to_drink? = unless is_of_age? age, drinking_age then
-  "I'm sorry, <age> isn't old enough to drink. The minimum age is <drinking_age>."
-elsif drink_age == "21" then
+def okay_to_drink? age, drinking_age
+  if is_of_age? age, drinking_age
+    "Come on in."
+  else
+    "I'm sorry, #{age} isn't old enough to drink.  The minimum age is #{drinking_age}."
 
-else
-  "Come on in"
 end
 
 
