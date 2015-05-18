@@ -7,8 +7,10 @@
 # it should return false if age is less than minimum_age
 
 def is_of_age? age, minimum_age
-  # your code goes here
+  age.to_i > minimum_age
 end
+
+puts is_of_age? 5, 7
 
 # question 2
 # complete the method okay_to_drink, which should invoke is_of_age? from question 1
@@ -19,9 +21,14 @@ end
 # Remember p, print, puts don't return their arguments
 
 def okay_to_drink age, drinking_age
-  # your code goes here
+  if !is_of_age? age, drinking_age then
+    "I'm sorry, #{age} isn't old enough to drink.  The minimum age is #{drinking_age}."
+  else
+    "Come on in."
+  end
 end
 
+puts okay_to_drink 10, 21
 
 # question 3
 # complete the method ac_needed
@@ -35,9 +42,19 @@ end
 # If the air conditioner is non-functional and the current temperature is
 # below the desired temperature the method should return
 # "Fix the A/C whenever you have the chance. It's cool."
+
+
 def ac_needed current_temp, ac_working, desired_temp
-  # your code goes here
+  if ac_working && current_temp > desired_temp then
+    "Turn on the A/C Please"
+  elsif !ac_working && current_temp > desired_temp then
+    "Fix the A/C now! It's hot!"
+  elsif !ac_working && current_temp < desired_temp then
+    "Fix the A/C whenever you have the chance. It's cool."
+  end
 end
+
+puts ac_needed 25, false, 10
 
 
 # question 4
@@ -50,6 +67,19 @@ end
 
 # your code starts here
 
+def fizz_buzz num
+  if num % 3 == 0 && num % 5 == 0 then
+    "fizz buzz"
+  elsif num % 3 == 0 then
+    "fizz"
+  elsif num % 5 == 0 then
+    "buzz"
+  else
+    num
+  end
+end
+
+puts fizz_buzz 15
 
 # Question 5
 # add calls to your function to check what they return
