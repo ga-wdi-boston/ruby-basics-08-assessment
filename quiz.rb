@@ -21,7 +21,7 @@ puts is_of_age? 5, 7
 # Remember p, print, puts don't return their arguments
 
 def okay_to_drink age, drinking_age
-  if !is_of_age? 10, 21 then
+  if !is_of_age? age, drinking_age then
     "I'm sorry, #{age} isn't old enough to drink.  The minimum age is #{drinking_age}."
   else
     "Come on in."
