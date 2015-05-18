@@ -7,7 +7,8 @@
 # it should return false if age is less than minimum_age
 
 def is_of_age? age, minimum_age
-  # your code goes here
+  minimum_age >= 21
+
 end
 
 # question 2
@@ -19,9 +20,13 @@ end
 # Remember p, print, puts don't return their arguments
 
 def okay_to_drink age, drinking_age
-  # your code goes here
+  if age >= 21
+print "Come on in."
+elsif age < 21
+print"I'm sorry, <age> isn't old enough to drink.  The minimum age is <drinking_age>."
 end
 
+p
 
 # question 3
 # complete the method ac_needed
