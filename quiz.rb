@@ -6,9 +6,16 @@
 # it should accept strings or numbers in its arguments
 # it should return false if age is less than minimum_age
 
+
+minimum_age == 21
+
 def is_of_age? age, minimum_age
-  # your code goes here
+  if age < minimum_age then
+    false
+  else
+    true
 end
+
 
 # question 2
 # complete the method okay_to_drink, which should invoke is_of_age? from question 1
@@ -18,8 +25,11 @@ end
 # otherwise, it should return "Come on in."
 # Remember p, print, puts don't return their arguments
 
-def okay_to_drink age, drinking_age
-  # your code goes here
+def okay_to_drink? age, drinking_age
+  if is_of_age? == false then
+    "I'm sorry," age.to_s + "isn't old enough to drink. The minimum age is" drinking_age.to_s
+  if is_of_age == true then
+    "Come on in."
 end
 
 
@@ -35,8 +45,11 @@ end
 # If the air conditioner is non-functional and the current temperature is
 # below the desired temperature the method should return
 # "Fix the A/C whenever you have the chance. It's cool."
-def ac_needed current_temp, ac_working, desired_temp
-  # your code goes here
+def ac_needed? current_temp, ac_working, desired_temp
+  if (ac_working == true) && (current_temp > desired_temp) then
+    "Fix the A/C now! It's hot!"
+  elsif (ac_working == false) && (current_temp < desired_temp) then
+    "Fix the A/C whenever you have the chance. It's cool."
 end
 
 
@@ -48,14 +61,23 @@ end
 # and "fizz buzz" if the number is evenly divisible by both 3 and 5
 # note the space in "fizz buzz"
 
-# your code starts here
+def fizz_buzz? num
+  if num % 3 == 0 then
+    "fizz"
+  elsif num % 5 == 0 then
+    "buzz"
+  elsif (num % 3 == 0) && (num % 5)
+    "fizz buzz"
+end
 
 
 # Question 5
-# add calls to your function to check what they return
+# add calls to your function(*should be method?) to check what they return
 # then run this script to see how they're they're working
 # using puts, etc is expected in this question
 
-# your code start here
+puts fizz_buzz(3)
+puts fizz_buzz(5)
+puts fizz_buzz(15)
 
 
