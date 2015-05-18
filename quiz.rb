@@ -6,9 +6,12 @@
 # it should accept strings or numbers in its arguments
 # it should return false if age is less than minimum_age
 
+
 def is_of_age? age, minimum_age
-  # your code goes here
+  age.to_i >= minimum_age.to_i
 end
+
+
 
 # question 2
 # complete the method okay_to_drink, which should invoke is_of_age? from question 1
@@ -18,8 +21,14 @@ end
 # otherwise, it should return "Come on in."
 # Remember p, print, puts don't return their arguments
 
-def okay_to_drink age, drinking_age
-  # your code goes here
+
+
+def okay_to_drink? age, drinking_age
+  if is_of_age? age, drinking_age
+    "Come on in."
+  else
+    "I'm sorry, #{age} isn't old enough to drink.  The minimum age is #{drinking_age}."
+
 end
 
 
@@ -48,7 +57,15 @@ end
 # and "fizz buzz" if the number is evenly divisible by both 3 and 5
 # note the space in "fizz buzz"
 
-# your code starts here
+def fizz_buzz? num then
+  num % 3 == 0 then
+  "fizz"
+elsif num % 5 == 0 then
+  "buzz"
+elsif (num % 3 == 0 && num % 5 == 0) then
+  "fizz buzz"
+end
+
 
 
 # Question 5
@@ -56,6 +73,14 @@ end
 # then run this script to see how they're they're working
 # using puts, etc is expected in this question
 
-# your code start here
+def fizz_buzz? num then
+  num % 3 == 0 then
+  puts "fizz"
+elsif num % 5 == 0 then
+  puts "buzz"
+elsif (num % 3 == 0 && num % 5 == 0) then
+  puts "fizz buzz"
+end
+
 
 
