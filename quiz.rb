@@ -7,9 +7,10 @@
 # it should return false if age is less than minimum_age
 
 def is_of_age? age, minimum_age
-  # your code goes here
+  if age < minumum_age then
+   false
+  end
 end
-
 # question 2
 # complete the method okay_to_drink, which should invoke is_of_age? from question 1
 # this question will receive feedback independent of your answer to question 1
@@ -19,7 +20,11 @@ end
 # Remember p, print, puts don't return their arguments
 
 def okay_to_drink age, drinking_age
-  # your code goes here
+  if is_of_age? age, drinking_age then
+    puts "Come on in"
+  else
+    puts "Im sorry " + age + " isn't old enough to drink. The minimum drinking age is " + drinking_age
+  end
 end
 
 
@@ -36,7 +41,13 @@ end
 # below the desired temperature the method should return
 # "Fix the A/C whenever you have the chance. It's cool."
 def ac_needed current_temp, ac_working, desired_temp
-  # your code goes here
+  if ac_working && current_temp > desired_temp then
+    puts "turn on the A/C please"
+  elsif !ac_working && current_temp > desired_temp then
+    puts "Fix the A/C now It's too DAMN HOT"
+  elsif !ac_working && current < desired_temp then
+    puts "EHHH fix it when you want to its cool"
+  end
 end
 
 
@@ -50,6 +61,20 @@ end
 
 # your code starts here
 
+def fizz_buzz number
+  num = 0
+  while num <= number
+    if num % 15 == 0 then
+      num += 1
+      puts "Fizz Buzz"
+    elsif num % 3 == 0 then
+      num += 1
+      puts "fizz"
+    elsif num % 5 == 0 then
+      num += 1
+      puts "buzz"
+  end
+end
 
 # Question 5
 # add calls to your function to check what they return
