@@ -7,6 +7,8 @@
 # it should return false if age is less than minimum_age
 
 def is_of_age? age, minimum_age
+  puts age
+  puts minimum_age
     if age.to_i <= minimum_age.to_i then
       true
     else
@@ -35,6 +37,7 @@ end
 # complete the method ac_needed
 # it takes as arguments the current temperature, if the A/C is functional,
 # and what temperature is wanted
+
 # If the air conditioner is functional and the current temperature is above
 # the desired temperature the method should return "Turn on the A/C Please"
 # If the air conditioner is non-functional and the current temperature is
@@ -44,7 +47,13 @@ end
 # below the desired temperature the method should return
 # "Fix the A/C whenever you have the chance. It's cool."
 def ac_needed current_temp, ac_working, desired_temp
-  # your code goes here
+  if ac_working && current_temp>desired_temp then
+    "Turn on the A/C Please"
+  elsif !ac_working && current_temp>desired_temp then
+    "Fix the A/C now! It's hot!"
+  elsif !ac_working && current_temp<desired_temp then
+    "Fix the A/C whenver you have the chance. It's cool."
+  end
 end
 
 
@@ -57,6 +66,25 @@ end
 # note the space in "fizz buzz"
 
 # your code starts here
+def fizz_buzz num
+  counter = 0
+  while counter <= num
+    if num%3 == 0 && num%5 == 0 then
+      "fizz buzz"
+      counter += 1
+      elsif num%3==0 then
+        "fizz"
+        counter += 1
+      elsif num %5 == 0 then
+        "buzz"
+        counter += 1
+        else
+          num
+          counter +=1
+    end
+  end
+
+end
 
 
 # Question 5
