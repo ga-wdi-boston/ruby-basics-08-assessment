@@ -7,10 +7,10 @@
 # it should return false if age is less than minimum_age
 
 def is_of_age? age, minimum_age
-    if age>=minimum_age then
-      "All Good"
+    if age.to_i <= minimum_age.to_i then
+      true
     else
-      "Not Good"
+      false
     end
 end
 
@@ -23,7 +23,11 @@ end
 # Remember p, print, puts don't return their arguments
 
 def okay_to_drink age, drinking_age
-  # your code goes here
+  if is_of_age? age, drinking_age then
+    "I'm sorry, #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
+  else
+    "Come on in."
+  end
 end
 
 
