@@ -23,9 +23,9 @@ def okay_to_drink age, drinking_age
     "Im sorry, ${age} isnt old enough to drink. The minimum age is ${drinking_age}."
   else is_of_age? age, drinking_age
     "Come on in."
+  end
 end
 
-puts okay_to_drink
 
 
 # question 3
@@ -49,7 +49,7 @@ def ac_needed current_temp, ac_working, desired_temp
     "Fix the A/C now! It's hot!"
   elsif current_temp < desired_temp && !ac_working then
     "Fix the A/C whenever you have the chance. It's cool."
-
+  end
 end
 
 
@@ -69,6 +69,7 @@ def fizz_buzz num
     "fizz"
   elsif num % 5 == 0 then
     "buzz"
+  end
 end
 
 
@@ -80,6 +81,6 @@ end
 # your code start here
 
 
-fizz_buzz 6
-fizz_buzz 21
-fizz_buzz 90
+puts fizz_buzz 6
+puts fizz_buzz 21
+puts fizz_buzz 90
