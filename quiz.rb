@@ -7,10 +7,14 @@
 # it should return false if age is less than minimum_age
 
 def is_of_age? age, minimum_age
-  # your code goes here
+  age > minimum_age
 end
 
 # question 2
+age = 20
+minimum_age = 21
+
+age_check = if is_of_age? age then
 # complete the method okay_to_drink, which should invoke is_of_age? from question 1
 # this question will receive feedback independent of your answer to question 1
 # the method should return "I'm sorry, <age> isn't old enough to drink.  The minimum age is <drinking_age>." if the call to is_of_age? returns false
@@ -19,7 +23,10 @@ end
 # Remember p, print, puts don't return their arguments
 
 def okay_to_drink age, drinking_age
-  # your code goes here
+  unless is_of_age?  then
+    "I'm sorry, #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
+  else
+    "Come on in!."
 end
 
 
@@ -36,7 +43,12 @@ end
 # below the desired temperature the method should return
 # "Fix the A/C whenever you have the chance. It's cool."
 def ac_needed current_temp, ac_working, desired_temp
-  # your code goes here
+  if ac_working && desired_temp < current_temp then
+    "Turn on the A/C please"
+  elseif ac_working && current_temp > desired_temp then
+    "Fix the A/C now! It's hot!"
+  elseif
+    "Fix the A/C whenever you have the chance. It's cool"
 end
 
 
@@ -48,7 +60,16 @@ end
 # and "fizz buzz" if the number is evenly divisible by both 3 and 5
 # note the space in "fizz buzz"
 
-# your code starts here
+def fizz_buzz num;
+  if num % 3 == 0 && num % 5 == 0 then
+    "FizzBuzz"
+  elseif num % 5 == 0 then
+    "Fizz"
+  elseif num % 3 == 0 then
+    "Buzz"
+  else
+    return num
+  end
 
 
 # Question 5
@@ -56,6 +77,7 @@ end
 # then run this script to see how they're they're working
 # using puts, etc is expected in this question
 
-# your code start here
+age = 20
+minimum_age = 21
 
 
