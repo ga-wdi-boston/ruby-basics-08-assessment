@@ -7,7 +7,11 @@
 # it should return false if age is less than minimum_age
 
 def is_of_age? age, minimum_age
-  # your code goes here
+    if age>=minimum_age then
+      "All Good"
+    else
+      "Not Good"
+    end
 end
 
 # question 2
