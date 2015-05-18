@@ -7,7 +7,7 @@
 # it should return false if age is less than minimum_age
 
 def is_of_age? age, minimum_age
-  # your code goes here
+  age.to_i > minimum_age.to_i
 end
 
 # question 2
@@ -19,7 +19,10 @@ end
 # Remember p, print, puts don't return their arguments
 
 def okay_to_drink age, drinking_age
-  # your code goes here
+  if is_of_age? false then
+    p "I'm sorry, " + age + " isn't old enough to drink. The minimum age is " + drinking_age
+  else
+    p "Come on in."
 end
 
 
@@ -36,7 +39,12 @@ end
 # below the desired temperature the method should return
 # "Fix the A/C whenever you have the chance. It's cool."
 def ac_needed current_temp, ac_working, desired_temp
-  # your code goes here
+  if ac_working && current_temp > desired_temp then
+    p "Turn on the A/C Please."
+  elsif !ac_working && current_temp > desired_temp then
+    p "Fix the A/C now! It's Hot"
+  else !ac_working && current_temp < desired_temp
+    p "Fix the A/C whenever you have the chance. It's cool"
 end
 
 
@@ -49,6 +57,14 @@ end
 # note the space in "fizz buzz"
 
 # your code starts here
+def fixx_buzz num
+  if num % 3 == 0 then
+    p "fizz"
+  elsif  num % 5 == 0 then
+    p "buzz"
+  elsif (num % 3 == 0) && (num % 5 == 0) then
+    p "fizz buzz"
+end
 
 
 # Question 5
