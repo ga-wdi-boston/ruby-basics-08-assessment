@@ -5,8 +5,8 @@
 # Complete the method `is_of_age?`. It should accept either strings or numbers in its arguments,
 # and should return either `true` or `false` based on whether `age` is less than `minimum_age`.
 
-def is_of_age? age, minimum_age
-  # Replace this comment with your code.
+def is_of_age?(age, minimum_age)
+    return age < minimum_age
 end
 
 
@@ -21,8 +21,12 @@ end
 # This question will be graded independently of question one.
 # Remember: `p`, `print`, and `puts` don't return their arguments.
 
-def okay_to_drink? age, drinking_age
-  # Replace this comment with your code.
+def okay_to_drink?(age, drinking_age)
+    if !is_of_age?(age, drinking_age)
+        return "Come on in."
+    else
+        return "I'm sorry, #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
+    end
 end
 
 
@@ -44,8 +48,13 @@ end
 # If the AC is non-functional and it's NOT too hot, `ac_monitor` should return
 #   "Fix the AC whenever you have the chance. It's cool."
 
-def ac_monitor current_temp, ac_working, desired_temp
-  # Replace this comment with your code.
+def ac_monitor(current_temp, ac_working, desired_temp)
+    too_hot = current_temp > desired_temp
+    if ac_working
+        return too_hot ? "Turn on the Ac." : "Just right!"
+    else
+        return too_hot ? "Fix the AC now! It's too hot!" : "Fix the AC whenever you have the chance. It's cool."
+    end
 end
 
 
@@ -57,7 +66,20 @@ end
 # - return "fizzbuzz" if `num` is evenly divisible by both 3 and 5
 # - return the value of `num` if `num` isn't divisible by either 3 or 5
 
-# Replace this comment with your code.
+
+def fizz_buzz_calculator(num)
+    if num % 3 == 0 && num % 5 == 0
+        return "fizzbuzz"
+    elsif num % 3 == 0
+        return "fizz"
+    elsif num % 5 == 0
+        return "buzz"
+    else
+        return num
+    end
+end
+
+
 
 
 # Question 5 : "Return of the FizzBuzz"
@@ -67,6 +89,44 @@ end
 # and print out the result of `fizz_buzz_calculator` for that number.
 # This question will be graded independently of question four.
 
-# Replace this comment with your code.
 
+def fizz_buzz(min, max)
+    (min..max).each { |num| puts fizz_buzz_calculator(num) }
+end
+
+
+
+
+# Testing
+def testing()
+    puts "****Running Test on Method: okay_to_drink****"
+    puts "Inputs: 8, 21"
+    puts "Expected output: I'm sorry, 8 isn't old enough to drink. The minimum age is 21."
+    actual_output = okay_to_drink?(8, 21)
+    puts "Actual output: #{actual_output}"
+    if actual_output == "I'm sorry, 8 isn't old enough to drink. The minimum age is 21."
+        puts "Test succeeded - actual output matches expected output"
+    else
+        puts "Test failed"
+    end
+
+    puts
+    puts "****Running Test on Method: ac_monitor****"
+    puts "Inputs: 15, true, 14"
+    puts "Expected output: Turn on the Ac."
+    actual_output = ac_monitor(15, true, 14)
+    puts "Actual output: #{actual_output}"
+    if actual_output == "Turn on the Ac."
+        puts "Test succeeded - actual output matches expected output"
+    else
+        puts "Test failed"
+    end
+    puts
+    puts "****Running Test on Method: fizz_buzz****"
+    puts "Inputs: 1, 15"
+    puts "Program does in fact print fizz, buzz, fizzbuzz appropriately (manual check)."
+    fizz_buzz(1, 15)
+end
+
+testing()
 
