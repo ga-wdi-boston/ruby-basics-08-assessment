@@ -6,7 +6,7 @@
 # and should return either `true` or `false` based on whether `age` is less than `minimum_age`.
 
 def is_of_age? age, minimum_age
-  # Replace this comment with your code.
+  return age < minimum_age
 end
 
 
@@ -22,7 +22,11 @@ end
 # Remember: `p`, `print`, and `puts` don't return their arguments.
 
 def okay_to_drink? age, drinking_age
-  # Replace this comment with your code.
+  if is_of_age(age, drinking_age)
+     "I'm sorry, #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
+  else
+    puts "Come on in."
+  end
 end
 
 
@@ -37,7 +41,7 @@ end
 # desired temperature) `ac_monitor` should return
 #   "Turn on the AC."
 # If the AC is working, and it's not too hot, it should return
-#   "Just right!"
+#   ""
 #
 # If the AC isn't working and it's too hot, `ac_monitor` should return
 #   "Fix the AC now! It's hot!"
@@ -45,9 +49,16 @@ end
 #   "Fix the AC whenever you have the chance. It's cool."
 
 def ac_monitor current_temp, ac_working, desired_temp
-  # Replace this comment with your code.
+  if ac_working && current_temp.to_i > desired_temp.to_i
+    return "Turn on the AC."
+  elsif ac_working && current_temp == desired_temp
+    return "Just right!"
+  elsif !ac_working &&  current_temp > desired_temp
+    return "Fix the AC now! It's hot!"
+  else
+    "Fix the AC whenever you have the chance. It's cool."
+  end
 end
-
 
 # Question 4 : "The FizzBuzz Strikes Back"
 # Define a method called `fizz_buzz_calculator`, which takes one argument, `num`.
@@ -57,8 +68,22 @@ end
 # - return "fizzbuzz" if `num` is evenly divisible by both 3 and 5
 # - return the value of `num` if `num` isn't divisible by either 3 or 5
 
-# Replace this comment with your code.
+def fizz_buzz_calculator num
 
+  i = 1
+  while i <= num
+    if num % 3 == 0 && num % 5 == 0
+      return 'fizzbuzz'
+    elsif num % 3 == 0
+      return 'fizz'
+    elsif num % 5 == 0
+      return 'buzz'
+    else
+      return num
+    end
+    i +=1
+  end
+end
 
 # Question 5 : "Return of the FizzBuzz"
 # Let's create a new method called `fizz_buzz` that uses `fizz_buzz_calculator`.
@@ -67,6 +92,19 @@ end
 # and print out the result of `fizz_buzz_calculator` for that number.
 # This question will be graded independently of question four.
 
-# Replace this comment with your code.
+def fizz_buzz min, max
+  # option 1
+  # (min..max).each do |current_num|
+  #   p fizz_buzz_calculator current_num
+  # end
 
+  # option 2
+  i = min
+  while i >= min && i <= max
+    p fizz_buzz_calculator i
+    i += 1
+  end
+end
+
+#p fizz_buzz 5, 15
 
