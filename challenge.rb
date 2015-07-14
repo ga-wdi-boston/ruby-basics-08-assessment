@@ -6,7 +6,13 @@
 # and should return either `true` or `false` based on whether `age` is less than `minimum_age`.
 
 def is_of_age? age, minimum_age
-  # Replace this comment with your code.
+  if age < minimum_age
+    return false
+    puts "false"
+  else
+    return true
+    puts "true"
+  end
 end
 
 
