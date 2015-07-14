@@ -23,9 +23,9 @@ end
 
 def okay_to_drink? age, drinking_age
   if is_of_age?(age, drinking_age)
-    return "Come on in."
+    "Come on in."
   else
-    return "I'm sorry, #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
+    "I'm sorry, #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
   end
 end
 
