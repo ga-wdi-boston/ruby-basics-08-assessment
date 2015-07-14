@@ -5,8 +5,12 @@
 # Complete the method `is_of_age?`. It should accept either strings or numbers in its arguments,
 # and should return either `true` or `false` based on whether `age` is less than `minimum_age`.
 
-def is_of_age? age, minimum_age
-  # Replace this comment with your code.
+def is_of_age? (age, minimum_age)
+   if (minimum_age < age)
+    puts "true"
+  else
+    puts "false"
+  end
 end
 
 
@@ -21,8 +25,12 @@ end
 # This question will be graded independently of question one.
 # Remember: `p`, `print`, and `puts` don't return their arguments.
 
-def okay_to_drink? age, drinking_age
-  # Replace this comment with your code.
+def okay_to_drink? (age, drinking_age)
+  if is_of_age == "true"
+    puts "Come on in."
+  else
+    puts "I'm sorry #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
+  end
 end
 
 
@@ -44,8 +52,16 @@ end
 # If the AC is non-functional and it's NOT too hot, `ac_monitor` should return
 #   "Fix the AC whenever you have the chance. It's cool."
 
-def ac_monitor current_temp, ac_working, desired_temp
-  # Replace this comment with your code.
+def ac_monitor (current_temp, ac_working, desired_temp)
+  if (ac_working == "yes" ) && (current_temp > desired_temp)
+    puts "Turn on the AC."
+  elsif (ac_working == "yes") && (current_temp < desired_temp)
+    puts "Just right!"
+  elsif (ac_working == "no") && (current_temp > desired_temp)
+    puts "Fix the AC now! It's hot!"
+  elsif (ac_working == "no") && (current_temp < desired_temp)
+    puts "Fix the AC whenever you have the chance. It's cool."
+  end
 end
 
 
@@ -57,8 +73,17 @@ end
 # - return "fizzbuzz" if `num` is evenly divisible by both 3 and 5
 # - return the value of `num` if `num` isn't divisible by either 3 or 5
 
-# Replace this comment with your code.
-
+def fizz_buzz_calculator (num)
+  if (num % 3 == 0)
+    puts "fizz"
+  elsif (num % 5 == 0)
+    puts "buzz"
+  elsif (num % 5 == 0) && (num % 3 == 0)
+    puts "fizzbuzz"
+  else
+    puts num
+  end
+end
 
 # Question 5 : "Return of the FizzBuzz"
 # Let's create a new method called `fizz_buzz` that uses `fizz_buzz_calculator`.
@@ -67,6 +92,12 @@ end
 # and print out the result of `fizz_buzz_calculator` for that number.
 # This question will be graded independently of question four.
 
-# Replace this comment with your code.
+def fizz_buzz (min, max)
+ while min < max do
+    min += 1
+    return fizz_buzz_calculator(min)
+  end
+end
+
 
 
