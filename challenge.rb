@@ -1,12 +1,13 @@
 # Assessment :: Ruby Basics
 
+require 'pry'
 
 # Question 1
 # Complete the method `is_of_age?`. It should accept either strings or numbers in its arguments,
 # and should return either `true` or `false` based on whether `age` is less than `minimum_age`.
 
 def is_of_age? age, minimum_age
-  # Replace this comment with your code.
+  age >= minimum_age
 end
 
 
@@ -22,7 +23,11 @@ end
 # Remember: `p`, `print`, and `puts` don't return their arguments.
 
 def okay_to_drink? age, drinking_age
-  # Replace this comment with your code.
+  if is_of_age? age, drinking_age
+    "Come on in"
+  else
+    "I'm sorry, #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
+  end
 end
 
 
@@ -45,7 +50,16 @@ end
 #   "Fix the AC whenever you have the chance. It's cool."
 
 def ac_monitor current_temp, ac_working, desired_temp
-  # Replace this comment with your code.
+  too_hot = current_temp > desired_temp
+  if ac_working && too_hot
+    "Turn on the AC."
+  elsif ac_working && !too_hot
+    "Just right!"
+  elsif !ac_working && too_hot
+    "Fix the AC now! It's hot!"
+  else
+    "Fix the AC whenever you have the chance. It's cool."
+  end
 end
 
 
@@ -57,7 +71,17 @@ end
 # - return "fizzbuzz" if `num` is evenly divisible by both 3 and 5
 # - return the value of `num` if `num` isn't divisible by either 3 or 5
 
-# Replace this comment with your code.
+def fizz_buzz_calculator num
+  if num % 15 == 0
+    "fizzbuzz"
+  elsif num % 3 == 0
+    "fizz"
+  elsif num % 5 == 0
+    "buzz"
+  else
+    num
+  end
+end
 
 
 # Question 5 : "Return of the FizzBuzz"
@@ -67,6 +91,9 @@ end
 # and print out the result of `fizz_buzz_calculator` for that number.
 # This question will be graded independently of question four.
 
-# Replace this comment with your code.
+def fizz_buzz min, max
+  (min..max).each {|num| puts fizz_buzz_calculator num}
+end
 
-
+#binding.pry
+#""
