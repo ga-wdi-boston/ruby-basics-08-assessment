@@ -6,7 +6,15 @@
 # and should return either `true` or `false` based on whether `age` is less than `minimum_age`.
 
 def is_of_age? age, minimum_age
-  # Replace this comment with your code.
+  minimum_age = ()
+  age = ()
+  print "What is your age?"
+  age = gets.chomp
+  if age > minimum_age
+    return "True"
+  else
+    return "Fale"
+
 end
 
 
@@ -22,7 +30,11 @@ end
 # Remember: `p`, `print`, and `puts` don't return their arguments.
 
 def okay_to_drink? age, drinking_age
-  # Replace this comment with your code.
+  drinking_age = ()
+  age = ()
+  if is_of_age return "True"
+    print "Come on in"
+  else return "I'm sorry, #{age} isn't old enough to drink.  The minimum age is #{drinking_age}"
 end
 
 
@@ -45,7 +57,17 @@ end
 #   "Fix the AC whenever you have the chance. It's cool."
 
 def ac_monitor current_temp, ac_working, desired_temp
-  # Replace this comment with your code.
+  if ac_working = true && current_temp > desired_temp
+    return "Turn on the AC."
+
+  if ac_working = true && current_temp <= desired_temp
+    return "Just right!"
+
+  if ac_working = false && current_temp > desired_temp
+    return "Fix the AC now! It's hot!"
+  if ac_wokring = false && current_temp <= desired_temp
+    return "Fix the AC whenever you have the changce.  It's cool."
+  end
 end
 
 
@@ -57,7 +79,15 @@ end
 # - return "fizzbuzz" if `num` is evenly divisible by both 3 and 5
 # - return the value of `num` if `num` isn't divisible by either 3 or 5
 
-# Replace this comment with your code.
+def fizz_buzz_calculator num
+  if num % 3 == 0
+    return "fizz"
+  if num % 5 == 0
+    return "buzz"
+  if num % 3 == 0 && num % 5 == 0
+    return "fizzbuzz"
+  else
+    return "num"
 
 
 # Question 5 : "Return of the FizzBuzz"
@@ -66,7 +96,9 @@ end
 # When called, `fizz_buzz` should go through every number from `min` to `max`
 # and print out the result of `fizz_buzz_calculator` for that number.
 # This question will be graded independently of question four.
+ def fizz_buzz min, max
 
-# Replace this comment with your code.
+
+  print "#{fizz_buzz_calculator}"
 
 
