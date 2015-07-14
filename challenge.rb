@@ -50,11 +50,12 @@ end
 #   "Fix the AC whenever you have the chance. It's cool."
 
 def ac_monitor current_temp, ac_working, desired_temp
-  if ac_working && current_temp > desired_temp
+  too_hot = current_temp > desired_temp
+  if ac_working && too_hot
     "Turn on the AC."
-  elsif ac_working && current_temp <= desired_temp
+  elsif ac_working && too_hot
     "Just right!"
-  elsif !ac_working && current_temp > desired_temp
+  elsif !ac_working && too_hot
     "Fix the AC now! It's hot!"
   else
     "Fix the AC whenever you have the chance. It's cool."
