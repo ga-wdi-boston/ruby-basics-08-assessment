@@ -6,7 +6,7 @@
 # and should return either `true` or `false` based on whether `age` is less than `minimum_age`.
 
 def is_of_age? age, minimum_age
-  # Replace this comment with your code.
+  age > minimum_age
 end
 
 
@@ -22,7 +22,7 @@ end
 # Remember: `p`, `print`, and `puts` don't return their arguments.
 
 def okay_to_drink? age, drinking_age
-  # Replace this comment with your code.
+  age > drinking_age
 end
 
 
@@ -45,7 +45,15 @@ end
 #   "Fix the AC whenever you have the chance. It's cool."
 
 def ac_monitor current_temp, ac_working, desired_temp
-  # Replace this comment with your code.
+  if ((current_temp > desired_temp) && (ac_working == true))
+    p "Turn on the AC."
+  elsif ((current_temp <= desired_temp) && (ac_working == true))
+    p "Just right!"
+  elsif ((current_temp > desired_temp) && (ac_working != true))
+    p "Fix the AC now! It's hot!"
+  else
+    p "Fix the AC whenever you have the chance. It's cool."
+
 end
 
 
@@ -57,7 +65,22 @@ end
 # - return "fizzbuzz" if `num` is evenly divisible by both 3 and 5
 # - return the value of `num` if `num` isn't divisible by either 3 or 5
 
-# Replace this comment with your code.
+min = #choose
+max = #choose
+counter = min
+
+while counter <= max_num
+    counter += 1
+    if counter%15 == 0
+      puts "fizzbuzz"
+    elsif counter%3 == 0
+      puts "fizz"
+    elsif counter%5 == 0
+      puts "fizzbuzz"
+    else
+        puts counter
+    end
+end
 
 
 # Question 5 : "Return of the FizzBuzz"
@@ -67,6 +90,20 @@ end
 # and print out the result of `fizz_buzz_calculator` for that number.
 # This question will be graded independently of question four.
 
+fizz_buzz(min, max)
+  while min <= max
+      counter += 1
+      if counter%15 == 0
+        puts "fizzbuzz"
+      elsif counter%3 == 0
+        puts "fizz"
+      elsif counter%5 == 0
+        puts "fizzbuzz"
+      else
+          puts counter
+      end
+  end
+end
 # Replace this comment with your code.
 
 
