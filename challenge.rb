@@ -6,9 +6,13 @@
 # and should return either `true` or `false` based on whether `age` is less than `minimum_age`.
 
 def is_of_age? age, minimum_age
-  # Replace this comment with your code.
+  if age.to_i >= minimum_age.to_i
+    return true
+  else
+    return false
+  end
 end
-
+#tested
 
 # Question 2
 # Complete the method `okay_to_drink?`, which should invoke `is_of_age?` from question one.
@@ -22,9 +26,13 @@ end
 # Remember: `p`, `print`, and `puts` don't return their arguments.
 
 def okay_to_drink? age, drinking_age
-  # Replace this comment with your code.
+  if is_of_age?(age, drinking_age)
+    puts "come on in"
+  else
+    puts "I'm sorry, #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
+  end
 end
-
+#tested
 
 # Question 3
 # Complete the method `ac_monitor`
@@ -45,9 +53,17 @@ end
 #   "Fix the AC whenever you have the chance. It's cool."
 
 def ac_monitor current_temp, ac_working, desired_temp
-  # Replace this comment with your code.
+  if ac_working && current_temp > desired_temp
+    puts "turn on the AC"
+  elsif ac_working && current_temp <= desired_temp
+    puts "just right"
+  elsif current_temp > desired_temp
+    puts "fix AC now! too hot!!"
+  else
+    puts "fix the AC whenever you have the chance. It's cool"
+  end
 end
-
+#tested
 
 # Question 4 : "The FizzBuzz Strikes Back"
 # Define a method called `fizz_buzz_calculator`, which takes one argument, `num`.
@@ -57,8 +73,18 @@ end
 # - return "fizzbuzz" if `num` is evenly divisible by both 3 and 5
 # - return the value of `num` if `num` isn't divisible by either 3 or 5
 
-# Replace this comment with your code.
-
+def fizz_buzz_calculator num
+  if num %15 ==0
+    puts "fizzbuzz"
+  elsif num % 3 == 0
+    puts "fizz"
+  elsif num % 5 == 0
+    puts "buzz"
+  else
+    puts num
+  end
+end
+#tested
 
 # Question 5 : "Return of the FizzBuzz"
 # Let's create a new method called `fizz_buzz` that uses `fizz_buzz_calculator`.
@@ -67,6 +93,13 @@ end
 # and print out the result of `fizz_buzz_calculator` for that number.
 # This question will be graded independently of question four.
 
-# Replace this comment with your code.
+def fizz_buzz min, max
+  i = min
+  while i <= max do
+    fizz_buzz_calculator(i)
+    i += 1
+  end
+end
+#tested
 
 
