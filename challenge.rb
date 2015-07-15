@@ -22,11 +22,7 @@ end
 # Remember: `p`, `print`, and `puts` don't return their arguments.
 
 def okay_to_drink? age, drinking_age
-  if is_of_age?(age, drinking_age)
-    "Come on in."
-  else
-    "I'm sorry, #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
-  end
+  is_of_age?(age, drinking_age) ? "Come on in." : "I'm sorry, #{age} isn't old enough to drink. The minimum age is #{drinking_age}."
 end
 
 
@@ -69,7 +65,7 @@ end
 # - return the value of `num` if `num` isn't divisible by either 3 or 5
 
 def fizz_buzz_calculator num
-  if num % 15 == 0
+  if (num % 3 == 0) && (num % 5 == 0)
     "fizzbuzz"
   elsif num % 3 == 0
     "fizz"
