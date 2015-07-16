@@ -6,7 +6,7 @@
 # and should return either `true` or `false` based on whether `age` is less than `minimum_age`.
 
 def is_of_age? age, minimum_age
- check = (minimun_age.to_i) - age.to_i)
+ check = (minimun_age.to_i) - (age.to_i)
  check >= 0
 end
 
@@ -23,7 +23,7 @@ end
 # Remember: `p`, `print`, and `puts` don't return their arguments.
 
 def okay_to_drink? age, drinking_age
-  check >=0 ? "Come on in" : "I'm sorry " + age + " ins't old enough to drink. The minimun age is " + drinking_age +"."
+  check >=0 ? "Come on in" : "I'm sorry #{age} ins't old enough to drink. The minimun age is #{drinking_age}."
 end
 
 
@@ -46,16 +46,15 @@ end
 #   "Fix the AC whenever you have the chance. It's cool."
 
 def ac_monitor current_temp, ac_working, desired_temp
-  if ((ac_working == true) && (current_temp > desired_temp))
-    puts "Turn on the AC."
-  elsif (ac_working == true) && (current_temp <= desire_temp))
-    puts "Just Right!"
-  elsif ((ac_working == false) && (current_temp <= desire_temp))
-    puts "Fix the AC whenever you have the chance. It's cool"
-  else "Fix the AC now! It's hot!"
-
-
-  end
+  # if ((ac_working == true) && (current_temp > desired_temp))
+  #   "Turn on the AC."
+  # elsif (ac_working == true) && (current_temp <= desire_temp))
+  #   "Just Right!"
+  # elsif ((ac_working == false) && (current_temp <= desire_temp))
+  #   "Fix the AC whenever you have the chance. It's cool"
+  # else
+  #   "Fix the AC now! It's hot!"
+  # end
 end
 
 
@@ -66,25 +65,19 @@ end
 # - return "buzz" if `num` is evenly divisible by 5
 # - return "fizzbuzz" if `num` is evenly divisible by both 3 and 5
 # - return the value of `num` if `num` isn't divisible by either 3 or 5
+def fizz_buzz_calculator(num)
+  # if num%5 == 0 && num%3 == 0
+  #   "Fizzbuzz"
+  # elsif num%3 == 0
+  #   'Fizz'
+  # elsif num%5 == 0
+  #   'Buzz'
+  # else
+  #   num
+  # end
 
- def fizz_buzz_calculator(num
-    if num%5 == 0 && num%3 == 0
-      puts "Fizzbuzz"
 
-    elsif num%3 == 0
-      puts 'Fizz'
-
-    elsif num%5 == 0
-      puts 'Buzz'
-
-    else
-      puts i
-
-    end
-    i += 1
-  end
-
-  return list
+  # do the same logic, but replace if/elsif with case statement (switch in js)
 end
 
 
@@ -95,34 +88,38 @@ end
 # When called, `fizz_buzz` should go through every number from `min` to `max`
 # and print out the result of `fizz_buzz_calculator` for that number.
 # This question will be graded independently of question four.
-
-def fizzbuzz_calc (min max)
-  list = {
-  'Fizz' => [],
-  'Buzz' => [],
-  'FizzBuzz' =>[],
-  'other' => []}
-
-  i = 1
-  while i <= max && i > max
-    if i%5 == 0 && i%3 == 0
-      puts "Fizzbuzz"
-      list['FizzBuzz'].push(i)
-    elsif i%3 == 0
-      puts 'Fizz'
-      list['Fizz'].push(i)
-    elsif i%5 == 0
-      puts 'Buzz'
-      list['Buzz'].push(i)
-    else
-      puts i
-      list['other'].push(i)
-    end
-    i += 1
+def fizz_buzz(min, max)
+  (min..max).each do |number|
+    puts fizz_buzz_calculator(number)
   end
-
-  return list
 end
+# def fizzbuzz_calc (min max)
+#   list = { }
+#   'Fizz' => [],
+#   'Buzz' => [],
+#   'FizzBuzz' =>[],
+#   'other' => []}
+
+#   i = 1
+#   while i <= max && i > max
+#     if i%5 == 0 && i%3 == 0
+#       puts "Fizzbuzz"
+#       list['FizzBuzz'].push(i)
+#     elsif i%3 == 0
+#       puts 'Fizz'
+#       list['Fizz'].push(i)
+#     elsif i%5 == 0
+#       puts 'Buzz'
+#       list['Buzz'].push(i)
+#     else
+#       puts i
+#       list['other'].push(i)
+#     end
+#     i += 1
+#   end
+
+#   return list
+# end
 
 
 
