@@ -105,7 +105,7 @@ Diagnostic.else_if = 'elsif'
 # What method can you call on an array in order to iterate over it in Ruby?
 # Write your answer as a symbol.
 
-Diagnostic.array_iteration = :count
+Diagnostic.array_iteration = :count #or any enumerable 
 
 # Returns in Ruby
 #
