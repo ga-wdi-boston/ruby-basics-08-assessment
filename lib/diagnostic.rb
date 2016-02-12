@@ -5,9 +5,9 @@ Diagnostic = OpenStruct.new
 #
 # In a Ruby string, write the command you would use to run a script at
 # `lib/example.rb`
-ruby lib/example.rb
 
-Diagnostic.script = 'pry'
+
+Diagnostic.script = 'ruby lib/example.rb'
 
 # Using the REPL
 #
@@ -15,27 +15,25 @@ Diagnostic.script = 'pry'
 # prefer over `irb`
 pry
 
-Diagnostic.repl = 'name = "star wars episode viii"'
+Diagnostic.repl = 'pry'
+
 
 # Naming conventions in Ruby
 #
 # In a Ruby string, write what you would write to properly name a variable in
 # Ruby that read in English as "star wars episode viii".
 
-name = "star wars episode viii"
-puts name
+Diagnostic.variable = "star_wars_episode_viii"
 
-Diagnostic.variable =  "character = #{'Jar Jar Binks'}"
-
+character = 'Jar Jar Binks'
 # String interpolation in Ruby
 #
 # Use string interpolation to complete the sentence below. Replace "ANSWER" with
 # the correct code.
 
- "character = #{'Jar Jar Binks'}"
 character = 'Jar Jar Binks'
 
-Diagnostic.interpolation = 'ANSWER is really a Sith Lord.'
+Diagnostic.interpolation = '#{character} is really a Sith Lord.'
 
 # Define a method in Ruby
 #
@@ -50,7 +48,7 @@ end
 
 puts mult_add(a,b)
 
-Diagnostic.defined_method = # call your method here
+Diagnostic.defined_method = mult_add(a, b)
 
 # Define a predicate method in Ruby
 #
@@ -59,16 +57,11 @@ Diagnostic.defined_method = # call your method here
 
 # define your method here
 
-def odd(num)
-   if num % 2 == 1
-      return "#{numb} is odd"
-   end
-   if num % 2 == 0
-      return "#{num} is even"
-  end
+def true_if_odd(x)
+  x.odd?
 end
 
-Diagnostic.predicate = # call your method here
+Diagnostic.predicate = true_if_odd(17)
 
 # Numbers in Ruby
 #
@@ -85,14 +78,14 @@ Diagnostic.integer = 'Fixnum'
 # Write an example of a decimal and an integer in Ruby. Replace the Ruby strings
 # in the following array with your examples.
 
-Diagnostic.numbers = ['decimal', 'integer']
+Diagnostic.numbers = ['3.3', '3']
 
 # Falsiness in Ruby
 #
 # Write all the values that evaluate to "falsy" in Ruby. Write these values in
 # a Ruby array.
 
-Diagnostic.falsy = []
+Diagnostic.falsy = [false, nil]
 
 # Flow control in Ruby
 #
@@ -122,7 +115,7 @@ Diagnostic.else_if = 'elsif'
 # What method can you call on an array in order to iterate over it in Ruby?
 # Write your answer as a symbol.
 
-Diagnostic.array_iteration = :example.each do
+Diagnostic.array_iteration = .each do, :map
 
 # Returns in Ruby
 #
