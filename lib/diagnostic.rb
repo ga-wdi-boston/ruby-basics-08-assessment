@@ -20,7 +20,7 @@ Diagnostic.repl = 'pry'
 # In a Ruby string, write what you would write to properly name a variable in
 # Ruby that read in English as "star wars episode viii".
 
-Diagnostic.variable = 'snake_case'
+Diagnostic.variable = 'star_wars_episode_viii'
 
 # String interpolation in Ruby
 #
@@ -37,11 +37,11 @@ Diagnostic.interpolation = '#{character} is really a Sith Lord.'
 # of multiplying by two the result of adding `a` and `b`. Name the method
 # conventionally.
 
-def multiply(a,b)
-  a * b
+def add_and_multiply(a,b)
+  2 * (a + b)
 end
 
-Diagnostic.defined_method = multiply {|a,b| 2,3}
+Diagnostic.defined_method = add_and_multiply(2,3)
 
 # Define a predicate method in Ruby
 #
@@ -54,19 +54,19 @@ def is_odder(a)
   a.odd? #No need to type return because Ruby returns the last line in a method
 end
 
-Diagnostic.predicate = is_odder {|a| 22}
+Diagnostic.predicate = is_odder(22)
 
 # Numbers in Ruby
 #
 # What is the type of object in Ruby for decimal numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.decimal = 'float'
+Diagnostic.decimal = 'Float'
 
 # What is the type of object in Ruby for integer numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.integer = 'Integer'
+Diagnostic.integer = 'Fixnum'
 
 # Write an example of a decimal and an integer in Ruby. Replace the Ruby strings
 # in the following array with your examples.
@@ -78,7 +78,7 @@ Diagnostic.numbers = ['0.00', '1']
 # Write all the values that evaluate to "falsy" in Ruby. Write these values in
 # a Ruby array.
 
-Diagnostic.falsy = ['nil']
+Diagnostic.falsy = ['nil','false']
 
 # Flow control in Ruby
 #
