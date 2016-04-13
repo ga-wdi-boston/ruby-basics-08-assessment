@@ -6,14 +6,14 @@ Diagnostic = OpenStruct.new
 # In a Ruby string, write the command you would use to run a script at
 # `lib/example.rb`
 
-Diagnostic.script = 'your response here'
+Diagnostic.script = 'ruby -r "lib/example.rb"'
 
 # Using the REPL
 #
 # In a Ruby string, write the command you would use to enter the REPL we
 # prefer over `irb`
 
-Diagnostic.repl = 'your response here'
+Diagnostic.repl = 'pry lib/example.rb'
 
 # Naming conventions in Ruby
 #
@@ -29,7 +29,7 @@ Diagnostic.variable = 'your response here'
 
 character = 'Jar Jar Binks'
 
-Diagnostic.interpolation = 'ANSWER is really a Sith Lord.'
+Diagnostic.interpolation = '#{character} is really a Sith Lord.'
 
 # Define a predicate method in Ruby
 #
@@ -37,6 +37,10 @@ Diagnostic.interpolation = 'ANSWER is really a Sith Lord.'
 # conventionally.
 
 # define your method here
+
+even_or_odd =
+
+
 
 Diagnostic.predicate = # call your method here
 
@@ -78,18 +82,18 @@ end
 
 # Predict what value will be returned. Write your response as a Ruby string.
 
-Diagnostic.flow_control = 'your response here'
+Diagnostic.flow_control = '"The Dark Knight"'
 
 # In a Ruby string, write what keyword you use for "else if" clauses in Ruby.
 
-Diagnostic.else_if = 'your response here'
+Diagnostic.else_if = 'elsif'
 
 # Returns in Ruby
 #
 # Does ruby require an explicit return from methods? Answer true or false, and
 # replace nil.
 
-Diagnostic.returns = nil
+Diagnostic.returns = no
 
 # Ruby Arrays
 #
@@ -100,13 +104,14 @@ arr = [12, 34, 56, 67]
 # In a Ruby string, write how you would remove the last two elements from this
 # array
 
-Diagnostic.remove_from_array = 'your answer here'
+Diagnostic.remove_from_array = 'arr.pop(2)'
 
 # What would `arr` equal after:
 arr[arr.length + 2] = 99
 # Write your response as a ruby string
 
-Diagnostic.array_add_to = 'your answer here'
+Diagnostic.array_add_to = '[12, 34, 56, 67, nil, nil, 99]'
+#adds to nil indexes to the end of the array and then 99 to the new final index
 
 # Ruby Hashes
 #
@@ -115,10 +120,10 @@ Diagnostic.array_add_to = 'your answer here'
 # Use shorthand to make this one line long.
 # Write your response as a Ruby string.
 
-Diagnostic.person_hash = 'your answer here'
+Diagnostic.person_hash = 'person + {:age=> 25, :first_name "George"}'
 
 # Set a default return value to your `person` hash that concatenates the value
 # of person[:first_name] and a message about them.
 # Write your response as a Ruby string.
 
-Diagnostic.hash_default = 'your answer here'
+Diagnostic.hash_default = 'person.default = "George is a nice guy"'
