@@ -20,7 +20,7 @@ Diagnostic.repl = 'pry'
 # In a Ruby string, write what you would write to properly name a variable in
 # Ruby that read in English as "star wars episode viii".
 
-Diagnostic.variable = 'text_var = "star wars episode viii"'
+Diagnostic.variable = 'star_wars_episode_viii'
 
 # String interpolation in Ruby
 #
@@ -48,12 +48,12 @@ Diagnostic.predicate = odd_num?(1)
 # What is the type of object in Ruby for decimal numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.decimal = 'float'
+Diagnostic.decimal = 'Float'
 
 # What is the type of object in Ruby for integer numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.integer = 'fixnum'
+Diagnostic.integer = 'Fixnum'
 
 # Write an example of a decimal and an integer in Ruby. Replace the Ruby strings
 # in the following array with your examples.
@@ -103,7 +103,7 @@ arr = [12, 34, 56, 67]
 # In a Ruby string, write how you would remove the last two elements from this
 # array
 
-Diagnostic.remove_from_array = arr.pop(2)
+Diagnostic.remove_from_array = "arr.pop 2"
 
 # What would `arr` equal after:
 arr[arr.length + 2] = 99
