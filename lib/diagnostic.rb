@@ -31,18 +31,6 @@ character = 'Jar Jar Binks'
 
 Diagnostic.interpolation = "#{character} is really a Sith Lord."
 
-# Define a method in Ruby
-#
-# Define a method that takes two arguments, `a` and `b`, and returns the result
-# of multiplying by two the result of adding `a` and `b`. Name the method
-# conventionally.
-
-def add_and_multiply(a, b)
-  2 * (a + b)
-end
-
-Diagnostic.defined_method = add_and_multiply(3, 4)
-
 # Define a predicate method in Ruby
 #
 # Define a method that checks whether a number passed in is odd. Name it
@@ -111,3 +99,37 @@ Diagnostic.array_iteration = :map
 # replace nil.
 
 Diagnostic.returns = false
+
+# Ruby Arrays
+#
+# Given the following array:
+
+arr = [12, 34, 56, 67]
+
+# In a Ruby string, write how you would remove the last two elements from this
+# array
+
+Diagnostic.remove_from_array = 'arr.pop 2'
+
+# What would `arr` equal after:
+arr[arr.length + 2] = 99
+# Write your response as a ruby string
+
+Diagnostic.array_add_to = '[12, 34, 56, 67, nil, nil, 99]'
+# or (if they're basing it on having popped 2 from the end)
+Diagnostic.array_add_to = '[12, 34, nil, nil, 99]'
+
+# Ruby Hashes
+#
+# Instantiate a `person` hash with `age` and `first_name` as symbols and
+# a number age and a first name as their respective values.
+# Use shorthand to make this one line long.
+# Write your response as a Ruby string.
+
+Diagnostic.person_hash = 'person = {first_name: "Lauren", age: 26}'
+
+# Set a default return value to your `person` hash that concatenates the value
+# of person[:first_name] and a message about them.
+# Write your response as a Ruby string.
+
+Diagnostic.hash_default = 'person.default = "#{person[:first_name]} <is great>'
