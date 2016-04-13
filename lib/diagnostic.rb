@@ -109,7 +109,7 @@ Diagnostic.remove_from_array = arr.delete_at(-1, -2)
 arr[arr.length + 2] = 99
 # Write your response as a ruby string
 
-Diagnostic.array_add_to = '99'
+Diagnostic.array_add_to = '99 '
 
 # Ruby Hashes
 #
