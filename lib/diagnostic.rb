@@ -38,12 +38,11 @@ Diagnostic.interpolation = "#{character} is really a Sith Lord."
 # conventionally.
 
 # define your method here
-def isOdd?(num)
-  return num even?
+def odd? num
+  odd? num
 end
 
-
-Diagnostic.predicate = isOdd(5)
+Diagnostic.predicate = 3.odd?
 
 # Numbers in Ruby
 #
