@@ -38,8 +38,8 @@ Diagnostic.interpolation = "#{character} is really a Sith Lord."
 # conventionally.
 
 # define your method here
-def odd? num
-  odd? num
+def odd?(num)
+  num.odd?
 end
 
 Diagnostic.predicate = 3.odd?
@@ -105,7 +105,7 @@ arr = [12, 34, 56, 67]
 # In a Ruby string, write how you would remove the last two elements from this
 # array
 
-Diagnostic.remove_from_array = arr.slice!(2,2)
+Diagnostic.remove_from_array = arr.slice!(2, 2)
 
 # What would `arr` equal after:
 arr[arr.length + 2] = 99
