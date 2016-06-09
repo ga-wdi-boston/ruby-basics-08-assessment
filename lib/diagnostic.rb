@@ -13,7 +13,7 @@ Diagnostic.script = ruby lib/example.rb
 # In a Ruby string, write the command you would use to enter the REPL we
 # prefer over `irb`
 
-Diagnostic.repl = pyr
+Diagnostic.repl = pry
 
 # Naming conventions in Ruby
 #
