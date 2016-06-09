@@ -31,6 +31,8 @@ character = 'Jar Jar Binks'
 
 def ANSWER = 'Jar Jar Binks'
 
+  
+
 Diagnostic.interpolation = 'ANSWER is really a Sith Lord.'
 
 # Define a predicate method in Ruby
