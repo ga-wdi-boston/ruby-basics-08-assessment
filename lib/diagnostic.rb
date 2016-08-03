@@ -110,7 +110,8 @@ Diagnostic.remove_from_array = ''
 arr[arr.length + 2] = 99
 # Write your response as a ruby string
 
-Diagnostic.array_add_to = '[12, 34, , , , 99]'
+
+Diagnostic.array_add_to = '[12, 34, 56, 67, , , 99]'
 
 # Ruby Hashes
 #
