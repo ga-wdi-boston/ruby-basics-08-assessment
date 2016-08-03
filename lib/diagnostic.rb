@@ -41,7 +41,7 @@ def odd?(num)
   num.odd?
 end
 
-Diagnostic.predicate = odd?()
+Diagnostic.predicate = odd?(9)
 
 # Numbers in Ruby
 #
@@ -118,7 +118,7 @@ Diagnostic.array_add_to = [12, 34, 56, 67, nil, nil, 99]
 # Use shorthand to make this one line long.
 # Write your response as a Ruby string.
 
-Diagnostic.person_hash = person = { age: 27, first_name: David }
+Diagnostic.person_hash = person = { age: 27, first_name: 'David' }
 
 # Set a default return value to your `person` hash that concatenates the value
 # of person[:first_name] and a message about them.
