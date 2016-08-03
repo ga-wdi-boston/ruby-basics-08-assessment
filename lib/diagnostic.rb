@@ -6,30 +6,34 @@ Diagnostic = OpenStruct.new
 # In a Ruby string, write the command you would use to run a script at
 # `lib/example.rb`
 
-Diagnostic.script = 'your response here'
+Diagnostic.script = 'ruby lib/example.rb'
 
 # Using the REPL
 #
 # In a Ruby string, write the command you would use to enter the REPL we
 # prefer over `irb`
 
-Diagnostic.repl = 'your response here'
+Diagnostic.repl = 'pry'
 
 # Naming conventions in Ruby
 #
 # In a Ruby string, write what you would write to properly name a variable in
 # Ruby that read in English as "star wars episode viii".
 
-Diagnostic.variable = 'your response here'
+Diagnostic.variable = 'variable = "star wars episode viii"'
 
 # String interpolation in Ruby
 #
 # Use string interpolation to complete the sentence below. Replace "ANSWER" with
 # the correct code.
-
+answer = 'ANSWER'
 character = 'Jar Jar Binks'
+character.prepend('is really a sith lord')
+answer.delete!('ANSWER')
 
-Diagnostic.interpolation = 'ANSWER is really a Sith Lord.'
+
+
+Diagnostic.interpolation = "'character' + 'is really a Sith Lord.'"
 
 # Define a predicate method in Ruby
 #
@@ -37,6 +41,12 @@ Diagnostic.interpolation = 'ANSWER is really a Sith Lord.'
 # conventionally.
 
 # define your method here
+ary = [2, 3, 5, 7, 10, 5]
+arra
+ary_odd = ary.select { |e|e.odd }
+
+
+
 
 Diagnostic.predicate = # call your method here
 
@@ -45,12 +55,12 @@ Diagnostic.predicate = # call your method here
 # What is the type of object in Ruby for decimal numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.decimal = 'your response here'
+Diagnostic.decimal = 'float'
 
 # What is the type of object in Ruby for integer numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.integer = 'your response here'
+Diagnostic.integer = 'interger'
 
 # Write an example of a decimal and an integer in Ruby. Replace the Ruby strings
 # in the following array with your examples.
