@@ -6,14 +6,14 @@ Diagnostic = OpenStruct.new
 # In a Ruby string, write the command you would use to run a script at
 # `lib/example.rb`
 
-Diagnostic.script = 'your response here'
+Diagnostic.script = 'ruby lib/example.rb'
 
 # Using the REPL
 #
 # In a Ruby string, write the command you would use to enter the REPL we
 # prefer over `irb`
 
-Diagnostic.repl = 'your response here'
+Diagnostic.repl = 'pry'
 
 # Naming conventions in Ruby
 #
