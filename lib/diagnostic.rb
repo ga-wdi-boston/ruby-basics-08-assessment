@@ -129,4 +129,4 @@ Diagnostic.person_hash = 'person = {:age => 12, :first_name => 'Raine'}'
 # of person[:first_name] and a message about them.
 # Write your response as a Ruby string.
 
-Diagnostic.hash_default = 'person("Hello, ", :first_name)'
+Diagnostic.hash_default = 'person = Hash.new("Hello, ", :first_name)'
