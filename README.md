@@ -6,10 +6,13 @@ This diagnostic will cover the introductory Ruby material we've presented.
 
 ## Prerequisites
 
--   [ga-wdi-boston/ruby-vs-js](https://github.com/ga-wdi-boston/ruby-vs-js)
--   [ga-wdi-boston/ruby-vs-js-arrays](https://github.com/ga-wdi-boston/ruby-vs-js-arrays)
--   [ga-wdi-boston/ruby-vs-js-hash-dictionary](https://github.com/ga-wdi-boston/ruby-vs-js-hash-dictionary)
--   [ga-wdi-boston/ruby-vs-js-array-methods](https://github.com/ga-wdi-boston/ruby-vs-js-array-methods)
+-   [ga-wdi-boston/ruby](https://github.com/ga-wdi-boston/ruby)
+-   [ga-wdi-boston/ruby-arrays](https://github.com/ga-wdi-boston/ruby-arrays)
+-   [ga-wdi-boston/ruby-hash](https://github.com/ga-wdi-boston/ruby-hash)
+-   [ga-wdi-boston/ruby-array-methods](https://github.com/ga-wdi-boston/ruby-array-methods)
+-   [ga-wdi-boston/ruby-vs-js-study](https://github.com/ga-wdi-boston/ruby-vs-js-study)
+-   [ga-wdi-boston/ruby-vs-js-arrays-study](https://github.com/ga-wdi-boston/ruby-vs-js-arrays-study)
+-   [ga-wdi-boston/ruby-vs-js-hash-dictionary-study](https://github.com/ga-wdi-boston/ruby-vs-js-hash-dictionary-study)
 
 ## Instructions
 
@@ -36,5 +39,5 @@ your responses are correct.
 ## [License](LICENSE)
 
 1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use oralternative
-licensing, please contact legal@ga.co.
+1.  All software code is licensed under GNU GPLv3. For commercial use or
+    alternative licensing, please contact legal@ga.co.
