@@ -36,12 +36,12 @@ Diagnostic.interpolation = '#{character} is really a Sith Lord.'
 # What is the type of object in Ruby for decimal numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.decimal = 'number'
+Diagnostic.decimal = 'float'
 
 # What is the type of object in Ruby for integer numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.integer = 'number'
+Diagnostic.integer = 'integer'
 
 # Write an example of a decimal and an integer in Ruby. Replace the Ruby strings
 # in the following array with your examples.
