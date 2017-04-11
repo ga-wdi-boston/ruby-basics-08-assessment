@@ -8,21 +8,25 @@ Diagnostic = OpenStruct.new
 # In a Ruby string, write the command you would use to run a script at
 # `lib/example.rb`
 
-Diagnostic.script = 'your response here'
+
+Diagnostic.script = 'lib/example.rb'
+
 
 # Using the REPL
 #
 # In a Ruby string, write the command you would use to enter the REPL we
 # prefer over `irb`
 
-Diagnostic.repl = 'your response here'
+
+
+Diagnostic.repl = 'pry'
 
 # Naming conventions in Ruby
 #
 # In a Ruby string, write what you would write to properly name a variable in
 # Ruby that read in English as "star wars episode viii".
 
-Diagnostic.variable = 'your response here'
+Diagnostic.variable = 'star_wars_episode_viii'
 
 # String interpolation in Ruby
 #
@@ -31,34 +35,41 @@ Diagnostic.variable = 'your response here'
 
 character = 'Jar Jar Binks'
 
-Diagnostic.interpolation = 'ANSWER is really a Sith Lord.'
+Diagnostic.interpolation = '#{character} is really a Sith Lord.'
 
 # Numbers in Ruby
 #
 # What is the type of object in Ruby for decimal numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.decimal = 'your response here'
+Diagnostic.decimal = 'Float'
+
+# "We need to understand that decimal numbers are not precise. The official Ruby documentation clearly says that float objects represent inexact real numbers." -http://zetcode.com/lang/rubytutorial/datatypes/
 
 # What is the type of object in Ruby for integer numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.integer = 'your response here'
+Diagnostic.integer = 'Integer'
+
+# In my research, i found that ruby integers are objects of class Fixnum or Bignum
+# , which respresent integers of different sizes. Both descend from Integer, so I think
+# all 3 answers may be correct, but will go with the safest one.
 
 # Write an example of a decimal and an integer in Ruby. Replace the Ruby strings
 # in the following array with your examples.
 
-Diagnostic.numbers = ['decimal', 'integer']
+Diagnostic.numbers = ['6.9', '69']
 
 # Falsiness in Ruby
 #
 # Write all the values that evaluate to "falsy" in Ruby. Write these values in
 # a Ruby array.
 
-Diagnostic.falsy = []
+Diagnostic.falsy = [false, nil]
+
+# http://stackoverflow.com/questions/23068834/what-evaluates-to-false-in-ruby
 
 # Flow control in Ruby
-#
 # Examine the following code.
 
 batman = 'Bruce Wayne'
@@ -71,18 +82,18 @@ end
 
 # What value will be returned. Write your response as a Ruby string.
 
-Diagnostic.flow_control = 'your response here'
+Diagnostic.flow_control = 'The Dark Knight'
 
 # In a Ruby string, write what keyword you use for "else if" clauses in Ruby.
 
-Diagnostic.else_if = 'your response here'
+Diagnostic.else_if = 'elsif'
 
 # Returns in Ruby
 #
 # Does ruby require an explicit return from methods? Answer true or false, and
 # replace nil.
 
-Diagnostic.returns = nil
+Diagnostic.returns = false
 
 # Ruby Arrays
 #
@@ -92,8 +103,11 @@ arr = [12, 34, 56, 67]
 
 # In a Ruby string, write how you would remove the last two elements from this
 # array
+# I know there are 3 possibilites to delete elements, but I think the other 2
+# only delete 1, but I thought that was the case for pop. I would know how to write OpenStruct
+#   the function to do this for sute...
 
-Diagnostic.remove_from_array = 'your answer here'
+Diagnostic.remove_from_array = 'arr.pop[2]'
 
 # Taking the result from the question above, what would `arr` now equal:
 arr[arr.length + 2] = 99
