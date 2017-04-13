@@ -2,7 +2,7 @@
 
 require 'ostruct'
 Diagnostic = OpenStruct.new
-
+#
 # Running scripts from the command line
 #
 # In a Ruby string, write the command you would use to run a script at
