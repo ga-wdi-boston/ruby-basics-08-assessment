@@ -99,7 +99,7 @@ Diagnostic.remove_from_array = 'arr.shift(2)'
 arr[arr.length + 2] = 99
 # Write your response as a ruby string
 
-Diagnostic.array_add_to = '[56, 67, nil, nil, 99]'
+Diagnostic.array_add_to = '[12, 34, nil, nil, 99]'
 
 # Ruby Hashes
 #
