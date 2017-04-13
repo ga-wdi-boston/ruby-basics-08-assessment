@@ -4,25 +4,26 @@ require 'ostruct'
 Diagnostic = OpenStruct.new
 
 # Running scripts from the command line
-#
+example1 = example.new(24)
+end.
 # In a Ruby string, write the command you would use to run a script at
 # `lib/example.rb`
 
-Diagnostic.script = 'your response here'
+Diagnostic.script = '#{@value}'
 
 # Using the REPL
 #
 # In a Ruby string, write the command you would use to enter the REPL we
 # prefer over `irb`
 
-Diagnostic.repl = 'your response here'
+Diagnostic.repl =  starwars = "star wars episode vii"
 
 # Naming conventions in Ruby
 #
 # In a Ruby string, write what you would write to properly name a variable in
 # Ruby that read in English as "star wars episode viii".
 
-Diagnostic.variable = 'your response here'
+Diagnostic.variable = '#{charactor} is really a Sith Lord'
 
 # String interpolation in Ruby
 #
@@ -38,7 +39,7 @@ Diagnostic.interpolation = 'ANSWER is really a Sith Lord.'
 # What is the type of object in Ruby for decimal numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.decimal = 'your response here'
+Diagnostic.decimal = 'to_i'
 
 # What is the type of object in Ruby for integer numbers? Write your answer in
 # a Ruby string.
@@ -71,7 +72,8 @@ end
 
 # What value will be returned. Write your response as a Ruby string.
 
-Diagnostic.flow_control = 'your response here'
+Diagnostic.flow_control = 'Batman is the darknight and bruce wayne is just your average
+billionaire'
 
 # In a Ruby string, write what keyword you use for "else if" clauses in Ruby.
 
@@ -82,7 +84,7 @@ Diagnostic.else_if = 'your response here'
 # Does ruby require an explicit return from methods? Answer true or false, and
 # replace nil.
 
-Diagnostic.returns = nil
+Diagnostic.returns = true
 
 # Ruby Arrays
 #
