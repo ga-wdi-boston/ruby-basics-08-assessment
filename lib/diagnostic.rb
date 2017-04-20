@@ -93,13 +93,13 @@ arr = [12, 34, 56, 67]
 # In a Ruby string, write how you would remove the last two elements from this
 # array
 
-Diagnostic.remove_from_array = 'your answer here'
+Diagnostic.remove_from_array = 'arr.pop(2)'
 
 # Taking the result from the question above, what would `arr` now equal:
 arr[arr.length + 2] = 99
 # Write your response as a ruby string
 
-Diagnostic.array_add_to = 'your answer here'
+Diagnostic.array_add_to = '[12, 34, nil, nil, 99]'
 
 # Ruby Hashes
 #
@@ -108,7 +108,7 @@ Diagnostic.array_add_to = 'your answer here'
 # Use shorthand to make this one line long.
 # Write your response as a Ruby string.
 
-Diagnostic.person_hash = 'your answer here'
+Diagnostic.person_hash = 'person[]'
 
 # Set a default return value to your `person` hash that concatenates the value
 # of person[:first_name] and a message about them.
