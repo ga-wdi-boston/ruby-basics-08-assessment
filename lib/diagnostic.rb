@@ -114,4 +114,4 @@ Diagnostic.person_hash = 'person = Hash.new { | hash, key | hash[key] = {favorit
 # of person[:first_name] and a message about them.
 # Write your response as a Ruby string.
 
-Diagnostic.hash_default = 'your answer here'
+Diagnostic.hash_default = 'person = Hash.new { |hash, person| hash[person] = "Sorry, #{person[:first_name]} does not exists"}'
