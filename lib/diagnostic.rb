@@ -108,10 +108,10 @@ Diagnostic.array_add_to = '[12, 34, nil, nil, 99]'
 # Use shorthand to make this one line long.
 # Write your response as a Ruby string.
 
-Diagnostic.person_hash = 'person[]'
+Diagnostic.person_hash = '{:favorite_number => 1, :first_name => Brian}'
 
 # Set a default return value to your `person` hash that concatenates the value
 # of person[:first_name] and a message about them.
 # Write your response as a Ruby string.
 
-Diagnostic.hash_default = 'your answer here'
+Diagnostic.hash_default = "#{person[:first_name]} has a weird obsession with shoes"
