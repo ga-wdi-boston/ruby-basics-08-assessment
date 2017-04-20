@@ -93,7 +93,7 @@ arr = [12, 34, 56, 67]
 # In a Ruby string, write how you would remove the last two elements from this
 # array
 
-Diagnostic.remove_from_array = 'array.pop.pop'
+Diagnostic.remove_from_array = 'array.pop(2)'
 
 # Taking the result from the question above, what would `arr` now equal:
 arr[arr.length + 2] = 99
