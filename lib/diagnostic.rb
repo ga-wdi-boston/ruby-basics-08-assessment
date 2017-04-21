@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 require 'ostruct'
-Diagnostic = OpenStruct.new
 
+Diagnostic = OpenStruct.new
 # Running scripts from the command line
 #
 # In a Ruby string, write the command you would use to run a script at
 # `lib/example.rb`
 
-Diagnostic.script = 'your response here'
+Diagnostic.script = './lib/example.rb'
 
 # Using the REPL
 #
@@ -22,7 +22,7 @@ Diagnostic.repl = 'your response here'
 # In a Ruby string, write what you would write to properly name a variable in
 # Ruby that read in English as "star wars episode viii".
 
-Diagnostic.variable = 'your response here'
+Diagnostic.variable = '@starwarsepisodeviii = star wars episode viii'
 
 # String interpolation in Ruby
 #
@@ -31,14 +31,14 @@ Diagnostic.variable = 'your response here'
 
 character = 'Jar Jar Binks'
 
-Diagnostic.interpolation = 'ANSWER is really a Sith Lord.'
+Diagnostic.interpolation = '@character is really a Sith Lord.'
 
 # Numbers in Ruby
 #
 # What is the type of object in Ruby for decimal numbers? Write your answer in
 # a Ruby string.
 
-Diagnostic.decimal = 'your response here'
+Diagnostic.decimal = ''
 
 # What is the type of object in Ruby for integer numbers? Write your answer in
 # a Ruby string.
@@ -82,7 +82,7 @@ Diagnostic.else_if = 'your response here'
 # Does ruby require an explicit return from methods? Answer true or false, and
 # replace nil.
 
-Diagnostic.returns = nil
+Diagnostic.returns = false
 
 # Ruby Arrays
 #
@@ -93,7 +93,7 @@ arr = [12, 34, 56, 67]
 # In a Ruby string, write how you would remove the last two elements from this
 # array
 
-Diagnostic.remove_from_array = 'your answer here'
+Diagnostic.remove_from_array = 'arr.delete[2, 3]'
 
 # Taking the result from the question above, what would `arr` now equal:
 arr[arr.length + 2] = 99
